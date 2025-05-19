@@ -22,8 +22,6 @@ namespace Lab_1
             }
         }
 
-        public string DayTitle => Day;
-
         public DaySchedulePage()
         {
             InitializeComponent();

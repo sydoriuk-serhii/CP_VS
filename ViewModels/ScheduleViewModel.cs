@@ -45,9 +45,12 @@ namespace Lab_1.ViewModels
                     _selectedDay = value;
                     FilterScheduleItems();
                     OnPropertyChanged();
+                    OnPropertyChanged(nameof(DayTitle));
                 }
             }
         }
+        
+        public string DayTitle => SelectedDay.ToString();
 
         public ICommand AddScheduleItemCommand { get; }
         public ICommand DeleteScheduleItemCommand { get; }
@@ -133,7 +136,7 @@ namespace Lab_1.ViewModels
                 MainThread.BeginInvokeOnMainThread(() => 
                 {
                     AllScheduleItems.Add(newItem);
-                    FilteredScheduleItems.Add(newItem);
+                    FilterScheduleItems();
                     SelectedItem = newItem;
                 });
             });
