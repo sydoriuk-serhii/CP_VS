@@ -11,18 +11,18 @@ namespace Lab_1
 {
     public partial class ImportPage : ContentPage
     {
-        private ScheduleViewModel _viewModel;
+        private NoteViewModel _viewModel;
 
         public ImportPage()
         {
             InitializeComponent();
-            BindingContext = new ScheduleViewModel();
-            _viewModel = (ScheduleViewModel)BindingContext;
+            BindingContext = new NoteViewModel();
+            _viewModel = (NoteViewModel)BindingContext;
         }
 
         private async void OnImportButtonClicked(object sender, EventArgs e)
         {
-            string filePath = FilePathEntry.Text;
+            string filePath = UrlEntry.Text;
             if (string.IsNullOrEmpty(filePath))
             {
                 await DisplayAlert("Error", "Please enter a valid file path", "OK");
@@ -32,26 +32,20 @@ namespace Lab_1
             try
             {
                 string json = await File.ReadAllTextAsync(filePath);
-                List<ScheduleItem> items = JsonConvert.DeserializeObject<List<ScheduleItem>>(json);
+                List<Note> notes = JsonConvert.DeserializeObject<List<Note>>(json);
 
-                foreach (var item in items)
+                foreach (var note in notes)
                 {
-                    await _viewModel.SaveScheduleItemAsync(item);
+                    _viewModel.AddNote(note);
                 }
 
-                _viewModel.RefreshSchedule();
-                await DisplayAlert("Success", $"{items.Count} schedule items imported successfully", "OK");
-                await Shell.Current.GoToAsync("..");
+                await DisplayAlert("Success", "Notes imported successfully", "OK");
             }
             catch (Exception ex)
             {
-                await DisplayAlert("Error", $"Failed to import schedule: {ex.Message}", "OK");
+                await DisplayAlert("Error", $"Failed to import notes: {ex.Message}", "OK");
             }
-        }
-
-        private async void OnCancelButtonClicked(object sender, EventArgs e)
-        {
-            await Shell.Current.GoToAsync("..");
         }
     }
 }
+

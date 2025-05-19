@@ -1,40 +1,15 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Lab_1.ViewModels"
              x:Class="Lab_1.ImportPage"
-             Title="Import Schedule">
+             Title="Import Notes">
 
     <ContentPage.BindingContext>
-        <local:ScheduleViewModel />
+        <local:NoteViewModel />
     </ContentPage.BindingContext>
 
-    <StackLayout Padding="20" Spacing="15">
-        <Label Text="Import Schedule Data" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,20,0,20" />
-        
-        <Label Text="Enter the file path to your JSON schedule data:" />
-        <Entry x:Name="FilePathEntry" Placeholder="C:\path\to\schedule.json" />
-        
-        <Label Text="Example JSON format:" FontSize="12" TextColor="Gray" Margin="0,10,0,0" />
-        <Frame BorderColor="LightGray" Padding="10" CornerRadius="5">
-            <Label TextType="Html">
-                <![CDATA[
-                [
-                  {
-                    "Id": 0,
-                    "DayOfWeek": 1,
-                    "Title": "Mathematics",
-                    "Description": "Linear algebra",
-                    "StartTime": "09:00:00",
-                    "EndTime": "10:30:00",
-                    "Location": "Room 101"
-                  }
-                ]
-                ]]>
-            </Label>
-        </Frame>
-        
-        <Button Text="Import" Clicked="OnImportButtonClicked" Margin="0,20,0,0" />
-        <Button Text="Cancel" Clicked="OnCancelButtonClicked" />
+    <StackLayout Padding="10">
+        <Entry x:Name="UrlEntry" Placeholder="Enter file path" />
+        <Button Text="Import" Clicked="OnImportButtonClicked" />
     </StackLayout>
 </ContentPage>

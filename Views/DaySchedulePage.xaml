@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CP.Views.DaySchedulePage"
+             xmlns:vm="clr-namespace:CP.ViewModels"
+             Title="{Binding Day}">
+
+    <ContentPage.Content>
+        <VerticalStackLayout Padding="10">
+
+            <CollectionView ItemsSource="{Binding Items}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BorderColor="LightGray" CornerRadius="8" Padding="10" Margin="5">
+                            <VerticalStackLayout>
+                                <Entry Text="{Binding Title}" Placeholder="Назва події"/>
+                                <Entry Text="{Binding Description}" Placeholder="Опис"/>
+                                <HorizontalStackLayout>
+                                    <Label Text="Початок:" VerticalOptions="Center"/>
+                                    <TimePicker Time="{Binding StartTime}" />
+                                    <Label Text="Кінець:" VerticalOptions="Center"/>
+                                    <TimePicker Time="{Binding EndTime}" />
+                                </HorizontalStackLayout>
+                                <Entry Text="{Binding Location}" Placeholder="Локація"/>
+                            </VerticalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <HorizontalStackLayout Spacing="10" Margin="0,10,0,0">
+                <Button Text="➕ Додати" Command="{Binding AddCommand}" />
+                <Button Text="💾 Зберегти" Command="{Binding SaveCommand}" />
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CP.Views.DaySelectorPage"
+             Title="Оберіть день">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
+            <Label Text="Тижневий розклад" FontSize="24" HorizontalOptions="Center" />
+
+            <Button Text="Понеділок" Clicked="OnDayClicked" CommandParameter="Monday"/>
+            <Button Text="Вівторок" Clicked="OnDayClicked" CommandParameter="Tuesday"/>
+            <Button Text="Середа" Clicked="OnDayClicked" CommandParameter="Wednesday"/>
+            <Button Text="Четвер" Clicked="OnDayClicked" CommandParameter="Thursday"/>
+            <Button Text="Пʼятниця" Clicked="OnDayClicked" CommandParameter="Friday"/>
+            <Button Text="Субота" Clicked="OnDayClicked" CommandParameter="Saturday"/>
+            <Button Text="Неділя" Clicked="OnDayClicked" CommandParameter="Sunday"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

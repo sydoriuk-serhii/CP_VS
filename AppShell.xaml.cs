@@ -7,17 +7,9 @@ namespace Lab_1
         public AppShell()
         {
             InitializeComponent();
-            
-            // Register routes for navigation
-            Routing.RegisterRoute("itemdetails", typeof(ScheduleItemDetailsPage));
-            Routing.RegisterRoute("monday", typeof(DaySchedulePage));
-            Routing.RegisterRoute("tuesday", typeof(DaySchedulePage));
-            Routing.RegisterRoute("wednesday", typeof(DaySchedulePage));
-            Routing.RegisterRoute("thursday", typeof(DaySchedulePage));
-            Routing.RegisterRoute("friday", typeof(DaySchedulePage));
-            Routing.RegisterRoute("saturday", typeof(DaySchedulePage));
-            Routing.RegisterRoute("sunday", typeof(DaySchedulePage));
-            Routing.RegisterRoute("importpage", typeof(ImportPage));
+            Routing.RegisterRoute("viewpage", typeof(ViewPage));
+            Routing.RegisterRoute("allnotes", typeof(AllNotes));
+            Routing.RegisterRoute("importpage", typeof(ImportPage)); // Register ImportPage route
         }
     }
 }

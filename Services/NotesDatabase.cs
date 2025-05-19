@@ -5,51 +5,41 @@ using Lab_1.Models;
 
 namespace Lab_1.Services
 {
-    public class ScheduleDatabase
+    public class NotesDatabase
     {
         private readonly SQLiteAsyncConnection _database;
 
-        public ScheduleDatabase(string dbPath)
+        public NotesDatabase(string dbPath)
         {
             _database = new SQLiteAsyncConnection(dbPath);
-            _database.CreateTableAsync<ScheduleItem>().Wait();
+            _database.CreateTableAsync<Note>().Wait();
         }
 
-        public Task<List<ScheduleItem>> GetScheduleItemsAsync()
+        public Task<List<Note>> GetNotesAsync()
         {
-            return _database.Table<ScheduleItem>().ToListAsync();
+            return _database.Table<Note>().ToListAsync();
         }
 
-        public Task<List<ScheduleItem>> GetScheduleItemsByDayAsync(DayOfWeek day)
+        public Task<Note> GetNoteAsync(int id)
         {
-            return _database.Table<ScheduleItem>()
-                .Where(i => i.DayOfWeek == day)
-                .OrderBy(i => i.StartTime)
-                .ToListAsync();
+            return _database.Table<Note>().Where(i => i.Id == id).FirstOrDefaultAsync();
         }
 
-        public Task<ScheduleItem> GetScheduleItemAsync(int id)
+        public Task<int> SaveNoteAsync(Note note)
         {
-            return _database.Table<ScheduleItem>()
-                .Where(i => i.Id == id)
-                .FirstOrDefaultAsync();
-        }
-
-        public Task<int> SaveScheduleItemAsync(ScheduleItem item)
-        {
-            if (item.Id != 0)
+            if (note.Id != 0)
             {
-                return _database.UpdateAsync(item);
+                return _database.UpdateAsync(note);
             }
             else
             {
-                return _database.InsertAsync(item);
+                return _database.InsertAsync(note);
             }
         }
 
-        public Task<int> DeleteScheduleItemAsync(ScheduleItem item)
+        public Task<int> DeleteNoteAsync(Note note)
         {
-            return _database.DeleteAsync(item);
+            return _database.DeleteAsync(note);
         }
     }
 }

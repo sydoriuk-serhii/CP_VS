@@ -1,44 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-       xmlns:local="clr-namespace:Lab_1"
-       xmlns:viewmodels="clr-namespace:Lab_1.ViewModels"
-       x:Class="Lab_1.AppShell"
-       Title="Weekly Schedule">
+<Shell
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:CP.Views"
+    x:Class="Lab_1.AppShell"
+    Shell.FlyoutBehavior="Disabled">
 
-    <Shell.BindingContext>
-        <viewmodels:ScheduleViewModel />
-    </Shell.BindingContext>
-    
-    <TabBar>
-        <Tab Title="Schedule" Icon="calendar.png">
-            <ShellContent Title="Monday" Route="monday">
-                <local:DaySchedulePage Day="Monday" />
-            </ShellContent>
-            <ShellContent Title="Tuesday" Route="tuesday">
-                <local:DaySchedulePage Day="Tuesday" />
-            </ShellContent>
-            <ShellContent Title="Wednesday" Route="wednesday">
-                <local:DaySchedulePage Day="Wednesday" />
-            </ShellContent>
-            <ShellContent Title="Thursday" Route="thursday">
-                <local:DaySchedulePage Day="Thursday" />
-            </ShellContent>
-            <ShellContent Title="Friday" Route="friday">
-                <local:DaySchedulePage Day="Friday" />
-            </ShellContent>
-            <ShellContent Title="Saturday" Route="saturday">
-                <local:DaySchedulePage Day="Saturday" />
-            </ShellContent>
-            <ShellContent Title="Sunday" Route="sunday">
-                <local:DaySchedulePage Day="Sunday" />
-            </ShellContent>
-        </Tab>
-    </TabBar>
-
-    <!-- Register routes for navigation -->
-    <Shell.Routes>
-        <ShellContent Route="itemdetails" ContentTemplate="{DataTemplate local:ScheduleItemDetailsPage}" />
-        <ShellContent Route="importpage" ContentTemplate="{DataTemplate local:ImportPage}" />
-    </Shell.Routes>
+    <ShellContent Title="Розклад" ContentTemplate="{DataTemplate local:DaySelectorPage}" />
 </Shell>
