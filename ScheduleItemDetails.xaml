@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Lab_1.ViewModels"
+             x:Class="Lab_1.ScheduleItemDetailsPage"
+             Title="Schedule Item Details">
+
+    <ContentPage.BindingContext>
+        <local:ScheduleViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="15">
+            <Button Text="Edit" Clicked="OnEditButtonClicked" HorizontalOptions="End" />
+            
+            <Frame BorderColor="LightGray" Padding="15" CornerRadius="5">
+                <StackLayout x:Name="DetailsStack" Spacing="15">
+                    <!-- Title -->
+                    <StackLayout>
+                        <Label Text="Title" FontSize="12" TextColor="Gray" />
+                        <Entry x:Name="TitleEntry" Text="{Binding SelectedItem.Title}" IsReadOnly="True" />
+                    </StackLayout>
+                    
+                    <!-- Day of Week -->
+                    <StackLayout>
+                        <Label Text="Day" FontSize="12" TextColor="Gray" />
+                        <Picker x:Name="DayPicker" SelectedItem="{Binding SelectedItem.DayOfWeek}" IsEnabled="False">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>Monday</x:String>
+                                    <x:String>Tuesday</x:String>
+                                    <x:String>Wednesday</x:String>
+                                    <x:String>Thursday</x:String>
+                                    <x:String>Friday</x:String>
+                                    <x:String>Saturday</x:String>
+                                    <x:String>Sunday</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                    </StackLayout>
+                    
+                    <!-- Time Range -->
+                    <Grid ColumnSpacing="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <StackLayout Grid.Column="0">
+                            <Label Text="Start Time" FontSize="12" TextColor="Gray" />
+                            <TimePicker x:Name="StartTimePicker" Time="{Binding SelectedItem.StartTime}" IsEnabled="False" />
+                        </StackLayout>
+                        <StackLayout Grid.Column="1">
+                            <Label Text="End Time" FontSize="12" TextColor="Gray" />
+                            <TimePicker x:Name="EndTimePicker" Time="{Binding SelectedItem.EndTime}" IsEnabled="False" />
+                        </StackLayout>
+                    </Grid>
+                    
+                    <!-- Location -->
+                    <StackLayout>
+                        <Label Text="Location" FontSize="12" TextColor="Gray" />
+                        <Entry x:Name="LocationEntry" Text="{Binding SelectedItem.Location}" IsReadOnly="True" />
+                    </StackLayout>
+                    
+                    <!-- Description -->
+                    <StackLayout>
+                        <Label Text="Description" FontSize="12" TextColor="Gray" />
+                        <Editor x:Name="DescriptionEditor" Text="{Binding SelectedItem.Description}" 
+                                IsReadOnly="True" HeightRequest="150" AutoSize="TextChanges" />
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
