@@ -11,7 +11,7 @@
 
     <ScrollView>
         <StackLayout Padding="20" Spacing="15">
-            <Button Text="Edit" Clicked="OnEditButtonClicked" HorizontalOptions="End" />
+            <Button Text="Edit" Clicked="OnEditButtonClicked" HorizontalOptions="End" x:Name="EditButton" />
             
             <Frame BorderColor="LightGray" Padding="15" CornerRadius="5">
                 <StackLayout x:Name="DetailsStack" Spacing="15">
@@ -24,18 +24,16 @@
                     <!-- Day of Week -->
                     <StackLayout>
                         <Label Text="Day" FontSize="12" TextColor="Gray" />
-                        <Picker x:Name="DayPicker" SelectedItem="{Binding SelectedItem.DayOfWeek}" IsEnabled="False">
-                            <Picker.ItemsSource>
-                                <x:Array Type="{x:Type x:String}">
-                                    <x:String>Monday</x:String>
-                                    <x:String>Tuesday</x:String>
-                                    <x:String>Wednesday</x:String>
-                                    <x:String>Thursday</x:String>
-                                    <x:String>Friday</x:String>
-                                    <x:String>Saturday</x:String>
-                                    <x:String>Sunday</x:String>
-                                </x:Array>
-                            </Picker.ItemsSource>
+                        <Picker x:Name="DayPicker" SelectedIndex="{Binding SelectedItem.DayOfWeek}" IsEnabled="False">
+                            <Picker.Items>
+                                <x:String>Sunday</x:String>
+                                <x:String>Monday</x:String>
+                                <x:String>Tuesday</x:String>
+                                <x:String>Wednesday</x:String>
+                                <x:String>Thursday</x:String>
+                                <x:String>Friday</x:String>
+                                <x:String>Saturday</x:String>
+                            </Picker.Items>
                         </Picker>
                     </StackLayout>
                     

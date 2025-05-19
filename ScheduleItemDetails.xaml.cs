@@ -45,7 +45,13 @@ namespace Lab_1
         {
             _isEditing = !_isEditing;
             UpdateEditState();
-            ((Button)sender).Text = _isEditing ? "Save" : "Edit";
+            EditButton.Text = _isEditing ? "Save" : "Edit";
+            
+            if (!_isEditing)
+            {
+                // Save changes when exiting edit mode
+                _viewModel.SaveScheduleItemCommand.Execute(null);
+            }
         }
 
         private void UpdateEditState()
@@ -57,12 +63,6 @@ namespace Lab_1
             EndTimePicker.IsEnabled = _isEditing;
             LocationEntry.IsReadOnly = !_isEditing;
             DescriptionEditor.IsReadOnly = !_isEditing;
-            
-            if (!_isEditing)
-            {
-                // Save changes when exiting edit mode
-                _viewModel.SaveScheduleItemCommand.Execute(null);
-            }
         }
     }
 }
