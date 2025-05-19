@@ -3,53 +3,42 @@
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:local="clr-namespace:Lab_1"
        xmlns:viewmodels="clr-namespace:Lab_1.ViewModels"
-       x:Class="Lab_1.AppShell">
+       x:Class="Lab_1.AppShell"
+       Title="Weekly Schedule">
 
     <Shell.BindingContext>
         <viewmodels:ScheduleViewModel />
     </Shell.BindingContext>
-
-    <FlyoutItem Title="Schedule" Icon="calendar.png">
-        <Tab>
+    
+    <TabBar>
+        <Tab Title="Schedule" Icon="calendar.png">
             <ShellContent Title="Monday" Route="monday">
-                <ContentPage>
-                    <local:DaySchedulePage Day="Monday" />
-                </ContentPage>
+                <local:DaySchedulePage Day="Monday" />
             </ShellContent>
             <ShellContent Title="Tuesday" Route="tuesday">
-                <ContentPage>
-                    <local:DaySchedulePage Day="Tuesday" />
-                </ContentPage>
+                <local:DaySchedulePage Day="Tuesday" />
             </ShellContent>
             <ShellContent Title="Wednesday" Route="wednesday">
-                <ContentPage>
-                    <local:DaySchedulePage Day="Wednesday" />
-                </ContentPage>
+                <local:DaySchedulePage Day="Wednesday" />
             </ShellContent>
             <ShellContent Title="Thursday" Route="thursday">
-                <ContentPage>
-                    <local:DaySchedulePage Day="Thursday" />
-                </ContentPage>
+                <local:DaySchedulePage Day="Thursday" />
             </ShellContent>
             <ShellContent Title="Friday" Route="friday">
-                <ContentPage>
-                    <local:DaySchedulePage Day="Friday" />
-                </ContentPage>
+                <local:DaySchedulePage Day="Friday" />
             </ShellContent>
             <ShellContent Title="Saturday" Route="saturday">
-                <ContentPage>
-                    <local:DaySchedulePage Day="Saturday" />
-                </ContentPage>
+                <local:DaySchedulePage Day="Saturday" />
             </ShellContent>
             <ShellContent Title="Sunday" Route="sunday">
-                <ContentPage>
-                    <local:DaySchedulePage Day="Sunday" />
-                </ContentPage>
+                <local:DaySchedulePage Day="Sunday" />
             </ShellContent>
         </Tab>
-    </FlyoutItem>
+    </TabBar>
 
-    <!-- Register routes -->
-    <ShellContent Route="itemdetails" ContentTemplate="{DataTemplate local:ScheduleItemDetailsPage}" />
-    <ShellContent Route="importpage" ContentTemplate="{DataTemplate local:ImportPage}" />
+    <!-- Register routes for navigation -->
+    <Shell.Routes>
+        <ShellContent Route="itemdetails" ContentTemplate="{DataTemplate local:ScheduleItemDetailsPage}" />
+        <ShellContent Route="importpage" ContentTemplate="{DataTemplate local:ImportPage}" />
+    </Shell.Routes>
 </Shell>

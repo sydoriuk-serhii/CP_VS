@@ -17,6 +17,7 @@ namespace Lab_1.ViewModels
         private ScheduleDatabase _database;
         private ScheduleItem _selectedItem;
         private DayOfWeek _selectedDay;
+        private bool _isInitialized = false;
 
         public ObservableCollection<ScheduleItem> AllScheduleItems { get; set; }
         public ObservableCollection<ScheduleItem> FilteredScheduleItems { get; set; }
@@ -55,7 +56,9 @@ namespace Lab_1.ViewModels
 
         public ScheduleViewModel()
         {
-            _database = new ScheduleDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Schedule.db3"));
+            string dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Schedule.db3");
+            _database = new ScheduleDatabase(dbPath);
+            
             AllScheduleItems = new ObservableCollection<ScheduleItem>();
             FilteredScheduleItems = new ObservableCollection<ScheduleItem>();
             _selectedDay = DateTime.Now.DayOfWeek; // Default to current day
@@ -70,13 +73,22 @@ namespace Lab_1.ViewModels
 
         private async void LoadScheduleItems()
         {
-            var items = await _database.GetScheduleItemsAsync();
-            AllScheduleItems.Clear();
-            foreach (var item in items)
+            try
             {
-                AllScheduleItems.Add(item);
+                var items = await _database.GetScheduleItemsAsync();
+                AllScheduleItems.Clear();
+                foreach (var item in items)
+                {
+                    AllScheduleItems.Add(item);
+                }
+                FilterScheduleItems();
+                _isInitialized = true;
             }
-            FilterScheduleItems();
+            catch (Exception ex)
+            {
+                // Handle database initialization errors
+                System.Diagnostics.Debug.WriteLine($"Database error: {ex.Message}");
+            }
         }
         
         private void FilterScheduleItems()
@@ -92,7 +104,16 @@ namespace Lab_1.ViewModels
 
         public async Task LoadScheduleItemAsync(int itemId)
         {
-            SelectedItem = await _database.GetScheduleItemAsync(itemId);
+            if (itemId <= 0) return;
+            
+            try
+            {
+                SelectedItem = await _database.GetScheduleItemAsync(itemId);
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error loading schedule item: {ex.Message}");
+            }
         }
 
         private void AddScheduleItem()
@@ -107,10 +128,15 @@ namespace Lab_1.ViewModels
                 Location = "Location"
             };
             
-            AllScheduleItems.Add(newItem);
-            FilteredScheduleItems.Add(newItem);
-            SelectedItem = newItem;
-            SaveScheduleItems();
+            SaveScheduleItemAsync(newItem).ContinueWith(_ => 
+            {
+                MainThread.BeginInvokeOnMainThread(() => 
+                {
+                    AllScheduleItems.Add(newItem);
+                    FilteredScheduleItems.Add(newItem);
+                    SelectedItem = newItem;
+                });
+            });
         }
 
         private async void DeleteScheduleItem()
@@ -134,12 +160,23 @@ namespace Lab_1.ViewModels
             }
         }
 
-        private async void SaveScheduleItems()
+        public async Task<int> SaveScheduleItemAsync(ScheduleItem item)
         {
-            foreach (var item in AllScheduleItems)
+            int result = await _database.SaveScheduleItemAsync(item);
+            
+            // If this is a new item that was just assigned an ID by the database
+            if (item.Id == 0)
             {
-                await _database.SaveScheduleItemAsync(item);
+                // Reload to get the assigned ID
+                var items = await _database.GetScheduleItemsAsync();
+                var savedItem = items.LastOrDefault();
+                if (savedItem != null)
+                {
+                    item.Id = savedItem.Id;
+                }
             }
+            
+            return result;
         }
 
         public void RefreshSchedule()
@@ -151,10 +188,6 @@ namespace Lab_1.ViewModels
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-            if (propertyName == nameof(SelectedItem))
-            {
-                SaveScheduleItem();
-            }
         }
     }
 }

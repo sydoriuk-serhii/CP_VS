@@ -72,7 +72,7 @@ namespace Lab_1
                 {
                     await Shell.Current.GoToAsync($"itemdetails?itemId={selectedItem.Id}");
                 }
-            }
+            } 
         }
 
         private async void OnImportButtonClicked(object sender, EventArgs e)
