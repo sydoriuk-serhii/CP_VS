@@ -8,11 +8,12 @@
     <ContentPage.Content>
         <VerticalStackLayout Padding="10">
 
-            <CollectionView ItemsSource="{Binding Items}">
+            <CollectionView x:Name="collectionView" ItemsSource="{Binding Items}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Frame BorderColor="LightGray" CornerRadius="8" Padding="10" Margin="5">
                             <VerticalStackLayout>
+<Button Text="🗑️ Видалити" Command="{Binding BindingContext.DeleteCommand, Source={x:Reference Name=collectionView}}" CommandParameter="{Binding .}" />
                                 <Entry Text="{Binding Title}" Placeholder="Назва події"/>
                                 <Entry Text="{Binding Description}" Placeholder="Опис"/>
                                 <HorizontalStackLayout>

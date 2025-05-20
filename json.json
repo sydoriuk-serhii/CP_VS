@@ -1,17 +1,16 @@
 [
     {
-        "Id": 0,
-        "Title": "First Note",
-        "Content": "This is the content of the first note."
+        "Title": "Лекція з філософії",
+        "Description": "Обговорення основних філософських концепцій",
+        "StartTime": "10:00:00",
+        "EndTime": "11:30:00",
+        "Location": "Аудиторія 301"
     },
     {
-        "Id": 0,
-        "Title": "Second Note",
-        "Content": "This is the content of the second note."
-    },
-    {
-        "Id": 0,
-        "Title": "Third Note",
-        "Content": "This is the content of the third note."
+        "Title": "Семінар з програмування",
+        "Description": "Робота з JSON у C#",
+        "StartTime": "13:00:00",
+        "EndTime": "14:30:00",
+        "Location": "Лаб. 105"
     }
 ]

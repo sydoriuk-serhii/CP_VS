@@ -6,6 +6,7 @@ using CP.Services;
 
 namespace CP.ViewModels
 {
+
     public class DayScheduleViewModel : INotifyPropertyChanged
     {
         public ObservableCollection<ScheduleItem> Items { get; set; } = new();
@@ -15,12 +16,17 @@ namespace CP.ViewModels
         public ICommand AddCommand { get; }
         public ICommand SaveCommand { get; }
 
+        public ICommand DeleteCommand { get; }
+
         public DayScheduleViewModel(string day)
         {
-            Day = day;
-            AddCommand = new Command(AddNewItem);
-            SaveCommand = new Command(async () => await SaveAsync());
-            _ = LoadAsync();
+            DeleteCommand = new Command<ScheduleItem>(DeleteItem);
+            {
+                Day = day;
+                AddCommand = new Command(AddNewItem);
+                SaveCommand = new Command(async () => await SaveAsync());
+                _ = LoadAsync();
+            }
         }
 
         private async Task LoadAsync()
@@ -52,5 +58,15 @@ namespace CP.ViewModels
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
-    }
-}
+    
+    private async void DeleteItem(ScheduleItem item)
+        {
+            if (item != null)
+            {
+                Items.Remove(item);
+                await _service.SaveScheduleAsync(Day, Items.ToList());
+            }
+        }
+    } }
+
+        

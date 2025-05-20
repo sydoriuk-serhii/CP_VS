@@ -7,176 +7,73 @@
     <projectFile kind="XamarinMacOS">Lab_1.csproj</projectFile>
     <projectFile profileName="Windows Machine">Lab_1.csproj</projectFile>
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1722250-bb5a-44f9-8f88-e013564778fe" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/AndroidProjectSystem.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/deploymentTargetSelector.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_activity_activity.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_activity_activity_ktx.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_annotation_annotation.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_annotation_annotation_experimental.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_annotation_annotation_jvm.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_appcompat_appcompat.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_appcompat_appcompat_resources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_arch_core_core_common.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_arch_core_core_runtime.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_browser_browser.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_cardview_cardview.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_collection_collection.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_collection_collection_jvm.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_collection_collection_ktx.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_concurrent_concurrent_futures.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_constraintlayout_constraintlayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_constraintlayout_constraintlayout_core.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_coordinatorlayout_coordinatorlayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_core_core.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_core_core_ktx.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_cursoradapter_cursoradapter.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_customview_customview.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_customview_customview_poolingcontainer.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_documentfile_documentfile.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_drawerlayout_drawerlayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_dynamicanimation_dynamicanimation.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_emoji2_emoji2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_emoji2_emoji2_views_helper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_exifinterface_exifinterface.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_fragment_fragment.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_fragment_fragment_ktx.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_interpolator_interpolator.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_legacy_legacy_support_core_utils.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_lifecycle_lifecycle_common.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_lifecycle_lifecycle_common_jvm.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_lifecycle_lifecycle_livedata.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_lifecycle_lifecycle_livedata_core.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_lifecycle_lifecycle_livedata_core_ktx.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_lifecycle_lifecycle_process.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_lifecycle_lifecycle_runtime_android.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_lifecycle_lifecycle_runtime_ktx_android.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_lifecycle_lifecycle_viewmodel_android.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_lifecycle_lifecycle_viewmodel_ktx.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_lifecycle_lifecycle_viewmodel_savedstate.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_loader_loader.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_localbroadcastmanager_localbroadcastmanager.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_navigation_navigation_common.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_navigation_navigation_fragment.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_navigation_navigation_runtime.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_navigation_navigation_ui.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_print_print.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_profileinstaller_profileinstaller.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_recyclerview_recyclerview.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_resourceinspection_resourceinspection_annotation.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_savedstate_savedstate.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_savedstate_savedstate_ktx.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_security_security_crypto.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_slidingpanelayout_slidingpanelayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_startup_startup_runtime.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_swiperefreshlayout_swiperefreshlayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_tracing_tracing.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_transition_transition.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_vectordrawable_vectordrawable.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_vectordrawable_vectordrawable_animated.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_versionedparcelable_versionedparcelable.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_viewpager2_viewpager2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_viewpager_viewpager.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_window_extensions_core_core.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/androidx_window_window.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/com_google_android_material_material.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/gifdecoder.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/glide.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/libraries/maui.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/App.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppShell.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/AppShell.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppShell.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppShell.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DaySchedulePage.xaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DaySchedulePage.xaml.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ImportPage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/ImportPage.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ImportPage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ImportPage.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_1.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_1.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_1.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_1.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MauiProgram.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MauiProgram.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/ScheduleItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/ScheduleItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Platforms/Android/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Platforms/Android/AndroidManifest.xml" afterDir="false" />
+    <list default="true" id="2de36e4c-765c-435f-ac06-f39a31efcec0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Lab_1/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Platforms/Android/MainActivity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Platforms/Android/MainActivity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Platforms/Android/MainApplication.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Platforms/Android/MainApplication.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Platforms/Android/Resources/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Platforms/Android/Resources/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Platforms/MacCatalyst/AppDelegate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Platforms/MacCatalyst/AppDelegate.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Platforms/MacCatalyst/Entitlements.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Platforms/MacCatalyst/Entitlements.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Platforms/MacCatalyst/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Platforms/MacCatalyst/Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Platforms/MacCatalyst/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Platforms/MacCatalyst/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Platforms/Tizen/Main.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Platforms/Tizen/Main.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Platforms/Tizen/tizen-manifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Platforms/Tizen/tizen-manifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Platforms/Windows/App.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Platforms/Windows/App.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Platforms/Windows/App.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Platforms/Windows/App.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Platforms/Windows/Package.appxmanifest" beforeDir="false" afterPath="$PROJECT_DIR$/Platforms/Windows/Package.appxmanifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Platforms/Windows/app.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/Platforms/Windows/app.manifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Platforms/iOS/AppDelegate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Platforms/iOS/AppDelegate.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Platforms/iOS/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Platforms/iOS/Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Platforms/iOS/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Platforms/iOS/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Platforms/iOS/Resources/PrivacyInfo.xcprivacy" beforeDir="false" afterPath="$PROJECT_DIR$/Platforms/iOS/Resources/PrivacyInfo.xcprivacy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Properties/launchSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/AppIcon/appicon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/AppIcon/appicon.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/AppIcon/appiconfg.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/AppIcon/appiconfg.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Fonts/FluentUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Fonts/FluentUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Raw/AboutAssets.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Raw/AboutAssets.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Splash/splash.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Splash/splash.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resources/Styles/Colors.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Styles/Colors.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Styles/Styles.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Styles/Styles.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ScheduleItemDetails.xaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ScheduleItemDetails.xaml.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/NotesDatabase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/NotesDatabase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/Tests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Tests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ViewModels/ScheduleViewModel.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_schesule.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ViewModels/DayScheduleViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ViewModels/DayScheduleViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/DaySchedulePage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/DaySchedulePage.xaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DpaMonitoringSettings">
+    <option name="firstShow" value="false" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "sydoriuk-serhii"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;sydoriuk-serhii&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/sydoriuk-serhii/CP_VS.git",
-    "accountId": "f138917c-cdcb-438a-a6e6-d84f0231e1ed"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/sydoriuk-serhii/CP_VS.git&quot;,
+    &quot;accountId&quot;: &quot;f138917c-cdcb-438a-a6e6-d84f0231e1ed&quot;
   }
-}]]></component>
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Platforms/Android/MainActivity.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="InvalidFacetManager">
     <ignored-facets>
       <facet id="Lab_1/invalid/Android Facet - Lab_1" />
     </ignored-facets>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
-  <component name="ProjectId" id="2xKoa7lXJNfZngfsh1OlRBZHLu2" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2xLNRBmZBV4g4O9z0a2Wkglg4jH" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;UWP.Lab_1.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="iOS.Lab_1">
+}</component>
+  <component name="RunManager" selected="UWP.Lab_1">
     <configuration name="Lab_1: Windows Machine" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lab_1.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net9.0-windows10.0.19041.0" />
@@ -228,12 +125,13 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b1722250-bb5a-44f9-8f88-e013564778fe" name="Changes" comment="" />
-      <created>1747696186847</created>
+      <changelist id="2de36e4c-765c-435f-ac06-f39a31efcec0" name="Changes" comment="" />
+      <created>1747713384950</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1747696186847</updated>
-      <workItem from="1747696188079" duration="151000" />
+      <updated>1747713384950</updated>
+      <workItem from="1747713387471" duration="1141000" />
+      <workItem from="1747721911514" duration="3808000" />
     </task>
     <servers />
   </component>
